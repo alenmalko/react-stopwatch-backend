@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
 
 // POST a new stopwatch time
 router.post("/saveStopwatchTime", async (req, res) => {
+  console.log (req.body)
   try {
     const { time } = req.body;
     // Time will be in milliseconds since that is the best format for Stopwatch time tracking...

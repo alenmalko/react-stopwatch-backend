@@ -1,12 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const timeRoutes= require("./api/routes/stopwatchtime")
+const cors= require ("cors");
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
+app.use(cors());
 app.use("/api/time", timeRoutes)
 
 // Connect to MongoDB
